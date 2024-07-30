@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayan Shahid Profile</title>
+    <title>Shahid Profile</title>
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
-    <h1>Ayan Khan</h1>
+    <h1>Shahid</h1>
     <form id="profilePasswordForm">
         <label for="profilePassword">Enter Password:</label>
         <input type="password" id="profilePassword" name="profilePassword" required>
@@ -17,6 +17,16 @@
         <h2>Position: Not settled</h2>
         <h2>Noble Rank: Not settled</h2>
     </div>
-    <script src="../scripts/main.js"></script>
+    <script>
+        document.getElementById('profilePasswordForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const password = document.getElementById('profilePassword').value;
+            if (password === 'JomnyDick') {
+                document.getElementById('profileContent').style.display = 'block';
+            } else {
+                alert('Incorrect password.');
+            }
+        });
+    </script>
 </body>
 </html>
