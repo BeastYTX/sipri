@@ -5,6 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rehan Profile</title>
     <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1c1c1c;
+            color: #e5e5e5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        form {
+            background-color: #2b2b2b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            font-size: 1.2rem;
+            color: #e5e5e5;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            background-color: #444;
+            color: #e5e5e5;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0078F2;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #005BB5;
+            transform: scale(1.05);
+        }
+
+        #profileContent {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            background-color: #2b2b2b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h2, p {
+            color: #e5e5e5;
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Rehan</h1>
@@ -14,14 +107,13 @@
         <button type="submit">Submit</button>
     </form>
     <div id="profileContent" style="display:none;">
-        <h2>Position: Not settled</h2>
-        <h2>Noble Rank: Not settled</h2>
+        <h2>Position: Spy Department</h2>
     </div>
     <script>
         document.getElementById('profilePasswordForm').addEventListener('submit', function (event) {
             event.preventDefault();
             const password = document.getElementById('profilePassword').value;
-            if (password === 'agent') {
+            if (password === 'rehan') {
                 document.getElementById('profileContent').style.display = 'block';
             } else {
                 alert('Incorrect password.');
